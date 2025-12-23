@@ -34,8 +34,27 @@ class CustomerController extends Controller
 //         $customer = Customer::find(1);
 // $customer->update(['title' => 'Updated']);
 
-        $data=Customer::find(1)->delete();
-        return view('customer.index', ['customer' => $data]);
+        // $data=Customer::find(1)->delete();
+        // return view('customer.index', ['customer' => $data]);
+
+        $customer = Customer::with('profile')->get();
+        echo $customer;
+        dd($customer); // user & profile both
+
+        // $customer = Customer::with('profile')->find(3);
+        // $profile = $customer->profile;
+        // dd($profile); // profile only
+
+        // $customer = Customer::with('profile')->first();
+        // $bio = $customer->profile->bio;
+        // $user_id = $customer->profile->user_id;
+        // dd($bio, $user_id);
+
+        // $students = Student::with('profile')->get();
+        // $student = $students[1];
+        // $bio = $user->profile->bio;
+        // $user_id = $user->profile->user_id;
+        // dd($bio, $user_id);
     }
     public function detail($id)
     {
