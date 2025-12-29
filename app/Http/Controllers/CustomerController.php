@@ -56,6 +56,18 @@ class CustomerController extends Controller
         // $user_id = $user->profile->user_id;
         // dd($bio, $user_id);
     }
+
+    public function showLatestComment($customerId)
+{
+  // Using find()
+  $customer = Customer::find($customerId);
+
+  // Access single comment through hasOneThrough
+  $latestComment = $customer->latestCommentThroughPost;
+
+  // Show result
+  dd($latestComment->comment);
+}
     public function detail($id)
     {
         return "Controller - Customer Detail - $id";

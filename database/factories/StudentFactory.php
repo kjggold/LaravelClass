@@ -16,10 +16,10 @@ class StudentFactory extends Factory
      */
     public function definition(): array
     {
-        return [
-            'title' => fake()->sentence,
-            'body' => fake()->paragraph,
-            'student_id' => rand(1, 5),
-        ];
+        // return [
+        //     'title' => fake()->sentence,
+        //     'body' => fake()->paragraph,
+        //     'student_id' => rand(1, 5),
+        // ];
     }
 }

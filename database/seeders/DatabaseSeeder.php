@@ -21,15 +21,16 @@ class DatabaseSeeder extends Seeder
     {
         // User::factory(10)->create();
 
-        Article::factory(10)->create();
+        // Article::factory(10)->create();
 
-        // User::factory()->create([
-        //     'name' => 'Test Customer',
-        //     'email' => 'test@example.com',
-        // ]);
+        // // User::factory()->create([
+        // //     'name' => 'Test Customer',
+        // //     'email' => 'test@example.com',
+        // // ]);
 
-        Customer::factory(10)->create();
-        Teacher::factory(10)->create();
+        // Customer::factory(10)->create();
+        // Teacher::factory(10)->create();
+        Customer::factory(5)->create();
 
     }
 }
