@@ -68,6 +68,14 @@ class CustomerController extends Controller
   // Show result
   dd($latestComment->comment);
 }
+
+public function manyCommentThroughPost($customerId)
+{
+    $customer = Customer::findOrFail($customerId);
+    $comments = $customer->manyCommentThroughPost;
+    dd($comments);
+
+}
     public function detail($id)
     {
         return "Controller - Customer Detail - $id";
