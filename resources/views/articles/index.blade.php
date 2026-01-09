@@ -1,25 +1,28 @@
-<!DOCTYPE html>
+{{-- <!DOCTYPE html>
 <html lang="en" dir="ltr">
 
 <head>
     <meta charset="utf-8">
     <title>Article List</title>
-</head>
+</head> --}}
 
-<body>
-    <header>
+
+    {{-- <header>
         <nav>
             <a href="/">Home</a> |
             <a href="/articles">Articles</a>
         </nav>
-    </header>
+    </header> --}}
 
-    <h1>Assignment List</h1>
+<x-app-layout>
+<body>
+    <h1>Article List</h1>
     <ul>
         <?php foreach ($articles as $article): ?>
         <li><?php    echo $article['title'] ?></li>
         <?php endforeach ?>
     </ul>
 </body>
-
-</html>
+</x-app-layout>
+{{--
+</html> --}}
