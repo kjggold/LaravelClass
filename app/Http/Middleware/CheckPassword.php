@@ -22,7 +22,7 @@ class CheckPassword
         }
 
         if(!Hash::check('qwert123', $user->password)){
-            abort (403, 'Permission not allowed');
+            abort (403, 'Password is incorrect');
         }
         return $next($request);
     }

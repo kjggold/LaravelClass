@@ -1,6 +1,8 @@
 <?php
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
+use App\Models\Article;
+
 class ArticleController extends Controller
 {
     public function index()
@@ -13,4 +15,19 @@ class ArticleController extends Controller
             'articles' => $data
         ]);
     }
+
+    public function create(){
+        return view('articles.create');
+    }
+
+    public function store(Request $request)
+  {
+      Article::create([
+          'title' => $request->title,
+          'body' => $request->body,
+          'category_id' => $request->category_id,
+      ]);
+
+      return redirect('/articles/create');
+  }
 }
