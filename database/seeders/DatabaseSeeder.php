@@ -30,7 +30,7 @@ class DatabaseSeeder extends Seeder
 
         // Customer::factory(10)->create();
         // Teacher::factory(10)->create();
-        Customer::factory(5)->create();
+        Article::factory(5)->create();
 
     }
 }

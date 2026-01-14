@@ -16,10 +16,10 @@ class ArticleFactory extends Factory
      */
     public function definition(): array
     {
-        // return [//column names
-        //     'title' => fake()->sentence,
-        //     'body' => fake()->paragraph,
-        //     'category_id' => rand(1, 5),//random numbers
-        // ];
+        return [//column names
+            'title' => fake()->sentence,
+            'body' => fake()->paragraph,
+            'category_id' => rand(1, 5),//random numbers
+        ];
     }
 }

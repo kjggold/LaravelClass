@@ -40,7 +40,7 @@ use App\Http\Controllers\ArticleController;
 // Route::get('/customer/post-customer-like', [CustomerController::class, 'latestCommentThroughPost']);
 
 
-Route::get('/articles', [ArticleController::class, 'index']);
+
 
 Route::get('/', function () {
     return view('welcome');
@@ -70,7 +70,14 @@ require __DIR__.'/auth.php';
 
 Route::middleware('auth')->group(function () {
 	Route::get('/articles/create', [ArticleController::class, 'create']);
-	Route::post('/articles/store', [ArticleController::class, 'store']);
-});
+	Route::post('/articles/store', [ArticleController::class, 'store'])
+    ;
+    Route::get('/articles', [ArticleController::class, 'read']);
+    // Route::get('/articles', [ArticleController::class, 'index']);
 
+    Route::get('/articles/edit/{id}', [ArticleController::class, 'edit']);
+    Route::put('/articles/update/{id}', [ArticleController::class, 'update']);
+
+    Route::delete('/articles/{id}', [ArticleController::class, 'destroy']);
+});
 ?>

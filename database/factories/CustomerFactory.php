@@ -16,10 +16,10 @@ class CustomerFactory extends Factory
      */
     public function definition(): array
     {
-        return [
-            'title' => fake()->sentence,
-            'body' => fake()->paragraph,
-            'customer_id' => rand(1, 5),
-        ];
+        // return [
+        //     'title' => fake()->sentence,
+        //     'body' => fake()->paragraph,
+        //     'customer_id' => rand(1, 5),
+        // ];
     }
 }
